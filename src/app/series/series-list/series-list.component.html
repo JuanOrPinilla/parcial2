@@ -1,0 +1,35 @@
+
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Channel</th>
+          <th scope="col">Seasons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of series">
+          <td>
+            <dd>{{s.id}}</dd>
+          </td>
+          <td>
+            <dd (click)="onSelected(s)">{{s.name}}</dd>
+          </td>
+          <td>
+            <dd>{{s.channel}}</dd>
+          </td>
+          <td>
+            <dd>{{s.seasons}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+    <p>Average Seasons: {{avgSeasons}}</p>
+  </div>
+  <div *ngIf="selected">
+    <app-series-detail [serieDetail]="selectedSerie"></app-series-detail>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+
+<div class="container-fluid">
+  <p class="h3 p-3">{{ serieDetail.name }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ serieDetail.poster }}"
+          alt="{{ serieDetail.name }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Authors</dt>
+        <dt class="bold">Description: </dt>
+        <dd>{{ serieDetail.description }}</dd>
+      </dl>
+    </div>
+  </div>
+ </div>
